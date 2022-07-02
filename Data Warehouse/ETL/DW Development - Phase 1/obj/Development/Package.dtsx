@@ -1,0 +1,1548 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/8/2022 9:24:42 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-4JL2VCE"
+  DTS:CreatorName="DESKTOP-4JL2VCE\acer"
+  DTS:DTSID="{28F51620-B2EF-4875-BA10-399FBCDA38A2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{E41A2F33-E251-4C0F-89BE-33C09695E88C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4JL2VCE.IBRD_Source]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8CBFBE1A-1228-4F22-810B-22979B3E5529}"
+      DTS:ObjectName="DESKTOP-4JL2VCE.IBRD_Source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-4JL2VCE;Initial Catalog=IBRD_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A559C36F-58F2-4581-B9D1-A68D644E4C9A}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\acer\Desktop\SourceFiles\LoanDisbursement.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loan Number"
+              DTS:DTSID="{8BA4CB1A-BA94-4816-8152-40CEA39BB133}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End of Period"
+              DTS:DTSID="{4C2C03BF-DDAD-43FB-9511-6E29CC8B4A0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cancelled Amount"
+              DTS:DTSID="{1061786B-B784-4844-8300-2179DD6889D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Undisbursed Amount"
+              DTS:DTSID="{8702D96C-7B8E-465C-A55C-46EBA094AA5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Disbursed Amount"
+              DTS:DTSID="{5B15EE76-BD40-4EC1-9BEE-3DA30D580080}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Exchange Adjustment"
+              DTS:DTSID="{C237B177-DCE7-42E2-B192-83C8AF5574FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loans Held"
+              DTS:DTSID="{313F3138-09AF-461A-949B-93B6414D0E21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Disbursement Date"
+              DTS:DTSID="{4F385AF2-F0C5-4F5F-AAFF-4BFBA4B753C0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E1377B85-697F-405B-8878-512CA79B49BF}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\acer\Desktop\SourceFiles\BorrowerRepayment.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loan Number"
+              DTS:DTSID="{D1B15A98-E72C-4464-8540-6153329AD15D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="End of Period"
+              DTS:DTSID="{C3DCB735-2905-41D7-A368-BC6296D72B07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First Repayment Date"
+              DTS:DTSID="{3649963D-E5A7-4996-936F-8E889FDCD223}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Repayment Date"
+              DTS:DTSID="{DBBE96A0-5E08-478E-8AE8-E38756F27E85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Repaid to IBRD"
+              DTS:DTSID="{6A888397-3047-4C38-9278-A870E7406BED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Due to IBRD"
+              DTS:DTSID="{94501CFD-3074-4CEE-93A1-DD089EABE356}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Borrower's Obligation"
+              DTS:DTSID="{93D5E208-4569-4111-889D-181CF5BA3E81}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Closed Date (Most Recent)"
+              DTS:DTSID="{AD407F08-3301-45D6-BC4F-61E8B0BABA60}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Bank Disbursement Data From Source File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6C8F0DC6-F1AE-46A8-BA7F-91B2CD12F8E5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Bank Disbursement Data From Source File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Bank Disbursement Data From Source File.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{15C324B4-3D51-4B61-BBC1-798A42A3DD51}"
+          DTS:EventID="536882432"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{729CEAF8-F1AA-4147-B70D-959E03DA037B}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Bank Disbursement Data From Source File.EventHandlers[OnPreExecute]\Truncate Bank Disbursement Source Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{A4776737-9576-4732-9FF9-057097938E59}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Bank Disbursement Source Table"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{8CBFBE1A-1228-4F22-810B-22979B3E5529}"
+                  SQLTask:SqlStatementSource="truncate table dbo.BankDisbursement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loan Number]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Loan Number]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loan Number]"
+                      name="Loan Number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[End of Period]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[End of Period]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[End of Period]"
+                      name="End of Period"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Cancelled Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cancelled Amount]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Cancelled Amount]"
+                      name="Cancelled Amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Undisbursed Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Undisbursed Amount]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Undisbursed Amount]"
+                      name="Undisbursed Amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Disbursed Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Disbursed Amount]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Disbursed Amount]"
+                      name="Disbursed Amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Exchange Adjustment]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Exchange Adjustment]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Exchange Adjustment]"
+                      name="Exchange Adjustment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loans Held]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Loans Held]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loans Held]"
+                      name="Loans Held"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Last Disbursement Date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Disbursement Date]"
+                      length="50"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Last Disbursement Date]"
+                      name="Last Disbursement Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Loan Number]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Loan Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[End of Period]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="End of Period" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cancelled Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Cancelled Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Undisbursed Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Undisbursed Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Disbursed Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Disbursed Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Exchange Adjustment]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Exchange Adjustment" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Loans Held]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Loans Held" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Disbursement Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Last Disbursement Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[BankDisbursement]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">65001</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-4JL2VCE.IBRD_Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-4JL2VCE.IBRD_Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Loan Number]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Loan Number"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loan Number]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loan Number]" />
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[End of Period]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End of Period"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[End of Period]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[End of Period]" />
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cancelled Amount]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Cancelled Amount"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cancelled Amount]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Cancelled Amount]" />
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Undisbursed Amount]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Undisbursed Amount"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Undisbursed Amount]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Undisbursed Amount]" />
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Disbursed Amount]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Disbursed Amount"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Disbursed Amount]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Disbursed Amount]" />
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Exchange Adjustment]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Exchange Adjustment"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Exchange Adjustment]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Exchange Adjustment]" />
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Loans Held]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Loans Held"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loans Held]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loans Held]" />
+                    <inputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Disbursement Date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Disbursement Date"
+                      externalMetadataColumnId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Disbursement Date]"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Last Disbursement Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loan Statement ID]"
+                      dataType="i4"
+                      name="Loan Statement ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loan Number]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Loan Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[End of Period]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="End of Period" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cancelled Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Cancelled Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Undisbursed Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Undisbursed Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Disbursed Amount]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Disbursed Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Exchange Adjustment]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Exchange Adjustment" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loans Held]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Loans Held" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Disbursement Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Last Disbursement Date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Bank Disbursement Data From Source File.Paths[Flat File Source Output]"
+              endId="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Bank Disbursement Data From Source File\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Borrower Repayment Data From Source File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{771E0EEE-7DD3-4152-9073-922A74305CC8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Borrower Repayment Data From Source File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Borrower Repayment Data From Source File.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{93AA13AD-CAC0-4FB8-8960-F6EAC1EB4B76}"
+          DTS:EventID="536882432"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{53C46D55-0150-4DAE-8F91-BD3D37E8356C}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Borrower Repayment Data From Source File.EventHandlers[OnPreExecute]\Truncate Borrower Repayment Source Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{ECA62E0F-7A77-4C2D-9408-DAB2BE332518}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Borrower Repayment Source Table"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{8CBFBE1A-1228-4F22-810B-22979B3E5529}"
+                  SQLTask:SqlStatementSource="truncate table dbo.BorrowerRepayment" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loan Number]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Loan Number]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loan Number]"
+                      name="Loan Number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[End of Period]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[End of Period]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[End of Period]"
+                      name="End of Period"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[First Repayment Date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[First Repayment Date]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[First Repayment Date]"
+                      name="First Repayment Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Last Repayment Date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Repayment Date]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Last Repayment Date]"
+                      name="Last Repayment Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Repaid to IBRD]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Repaid to IBRD]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Repaid to IBRD]"
+                      name="Repaid to IBRD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Due to IBRD]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Due to IBRD]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Due to IBRD]"
+                      name="Due to IBRD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Borrower's Obligation]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Borrower's Obligation]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Borrower's Obligation]"
+                      name="Borrower's Obligation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Closed Date (Most Recent)]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Closed Date (Most Recent)]"
+                      length="50"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Closed Date (Most Recent)]"
+                      name="Closed Date (Most Recent)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Loan Number]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Loan Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[End of Period]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="End of Period" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[First Repayment Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="First Repayment Date" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Repayment Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Last Repayment Date" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Repaid to IBRD]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Repaid to IBRD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Due to IBRD]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Due to IBRD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Borrower's Obligation]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Borrower's Obligation" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Closed Date (Most Recent)]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Closed Date (Most Recent)" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[BorrowerRepayment]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">65001</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-4JL2VCE.IBRD_Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-4JL2VCE.IBRD_Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Loan Number]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Loan Number"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loan Number]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Loan Number]" />
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[End of Period]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="End of Period"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[End of Period]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[End of Period]" />
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[First Repayment Date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First Repayment Date"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[First Repayment Date]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[First Repayment Date]" />
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Repayment Date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Repayment Date"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Repayment Date]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Last Repayment Date]" />
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Repaid to IBRD]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Repaid to IBRD"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Repaid to IBRD]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Repaid to IBRD]" />
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Due to IBRD]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Due to IBRD"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Due to IBRD]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Due to IBRD]" />
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Borrower's Obligation]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Borrower's Obligation"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Borrower's Obligation]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Borrower's Obligation]" />
+                    <inputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Closed Date (Most Recent)]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Closed Date (Most Recent)"
+                      externalMetadataColumnId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Closed Date (Most Recent)]"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output].Columns[Closed Date (Most Recent)]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Repayment ID]"
+                      dataType="i4"
+                      name="Repayment ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loan Number]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Loan Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[End of Period]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="End of Period" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[First Repayment Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="First Repayment Date" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Repayment Date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Last Repayment Date" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Repaid to IBRD]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Repaid to IBRD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Due to IBRD]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Due to IBRD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Borrower's Obligation]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Borrower's Obligation" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Closed Date (Most Recent)]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Closed Date (Most Recent)" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Borrower Repayment Data From Source File.Paths[Flat File Source Output]"
+              endId="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Borrower Repayment Data From Source File\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C16741ED-A7EE-422C-8C18-E881CCDB2DC8}"
+      DTS:From="Package\Extract Bank Disbursement Data From Source File"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract Borrower Repayment Data From Source File" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="311.2,41.6"
+          Id="Package\Extract Bank Disbursement Data From Source File"
+          TopLeft="230.499991059304,31.5000002066294" />
+        <NodeLayout
+          Size="318.4,41.6"
+          Id="Package\Extract Borrower Repayment Data From Source File"
+          TopLeft="228.833325650957,130.833334090975" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="387.06665835513,73.1000002066294">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.7333338843456"
+              Start="0,0"
+              End="0,50.2333338843456">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.2333338843456" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Bank Disbursement Data From Source File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Extract Bank Disbursement Data From Source File\Flat File Source"
+          TopLeft="272.166656070286,22.8333334710863" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination"
+          TopLeft="260.499991059304,157.700000971158" />
+        <EdgeLayout
+          Id="Package\Extract Bank Disbursement Data From Source File.Paths[Flat File Source Output]"
+          TopLeft="346.933323564795,64.4333334710863">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93.2666675000721"
+              Start="0,0"
+              End="0,85.7666675000721">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.7666675000721" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Bank Disbursement Data From Source File.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="277.6,41.6"
+          Id="Package\Extract Bank Disbursement Data From Source File.EventHandlers[OnPreExecute]\Truncate Bank Disbursement Source Table"
+          TopLeft="392.5,74.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Bank Disbursement Data From Source File\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Borrower Repayment Data From Source File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Extract Borrower Repayment Data From Source File\Flat File Source"
+          TopLeft="338.5,18.5" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination"
+          TopLeft="335.5,149.5" />
+        <EdgeLayout
+          Id="Package\Extract Borrower Repayment Data From Source File.Paths[Flat File Source Output]"
+          TopLeft="417.6,60.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89.4"
+              Start="0,0"
+              End="0,81.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Borrower Repayment Data From Source File.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="284.8,41.6"
+          Id="Package\Extract Borrower Repayment Data From Source File.EventHandlers[OnPreExecute]\Truncate Borrower Repayment Source Table"
+          TopLeft="340.5,72.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Borrower Repayment Data From Source File\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
